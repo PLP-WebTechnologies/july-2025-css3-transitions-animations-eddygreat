@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+header, footer{
+  background-color: #351d4b;
+  color: white;
+  /* padding: 1rem; */
+  border-radius: 10px;
+  border-block-style: groove;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+#demoTxt {
+  color: #333;
+  margin-top: 5rem;
+  margin-bottom: 0px;
+}
+
+#demoTxt2 {
+  font-size: 18px;
+  color: #333;
+  margin: 0px;
+  
+}
+/* Card Flip */
+.card {
+  width: 200px;
+  height: 150px;
+  margin: 2rem auto;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+ 
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(360deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: #eee;
+  border: 1px solid #3f2f5e;
+  padding:10px;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: #ffc107;
+  transform: rotateY(180deg);
+}
+
+/* Demo Box Animation */
+#demoBox {
+  width: 100px;
+  height: 100px;
+  /* background-color: #28a745; */
+  margin: 2rem auto;
+  transition: transform 0.9s ease;
+  border-radius: 3px;
+}
+
+#demoBtn {
+  background-color: #515377;
+  color: white;
+  border-radius: 8px;
+  box-shadow: #333 0px 1px 0px;
+  
+}
+
+#demoBtn:hover {
+  background-color: #276e3e;
+}
+
+.animate {
+  animation: drawEffect 7s ease forwards;
+}
+
+@keyframes drawEffect {
+  0% { transform: scale(1); background-color: #450eb3; }
+  25% { transform: scale(1) rotate(45deg); }
+  50% { transform: scale(1.5) rotate(45deg);  }
+  75% { transform: scale(2) rotate(45deg); }
+  100% { transform: scale(1) rotate(0deg); background-color: #37245e; }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  padding: 2rem;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.modal.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+input, select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}

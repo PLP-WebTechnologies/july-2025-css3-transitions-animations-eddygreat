@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCAD Mastery Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AutoCAD Mastery Hub</h1>
+    <p>Learn AutoCAD from industry experts</p>
+    <button id="enrollBtn">Enroll Now</button>
+  </header>
+
+  
+<!-- Modal with Registration Form -->
+<div id="modal" class="modal">
+  <h3>Enroll in AutoCAD Mastery</h3>
+  <form id="enrollForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course" required>
+      <option value="">--Choose a course--</option>
+      <option value="beginner">Beginner AutoCAD</option>
+      <option value="intermediate">Intermediate AutoCAD</option>
+      <option value="advanced">Advanced AutoCAD</option>
+    </select>
+
+    <button type="submit">Submit</button>
+    <button type="button" id="closeModalBtn">Close</button>
+  </form>
+</div>
+
+  <section class="courses">
+    <h2>Featured Courses</h2>
+    <div class="card" id="courseCard">
+      <div class="card-inner">
+        <div class="card-front">Beginner AutoCAD <br >Offer</div>
+        <div class="card-back">Duration: 4 weeks <br>Price: $99 only</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo">
+    <h2 id="demoTxt">Try a Drawing Demo</h2>
+    <p id="demoTxt2">Identify and draw the shape generated below</p>
+    <button id="demoBtn">Start Demo</button>
+    <div id="demoBox"></div>
+  </section>
+
+  <div id="modal" class="modal">
+    <h3>Enroll in AutoCAD Mastery</h3>
+    <p>Fill out your details to get started!</p>
+    <button id="closeModalBtn">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 AutoCAD Mastery Hub</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
